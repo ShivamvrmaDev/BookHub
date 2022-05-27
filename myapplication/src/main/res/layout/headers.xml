@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="240dp"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".headers"
+    android:background="#4169E1">
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="210dp"
+        android:layout_height="165dp"
+        android:layout_marginStart="10dp"
+
+        android:layout_marginTop="25dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/header_img" />
+
+</RelativeLayout>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.40255962769051773" />
+        <entry key="myapplication/src/main/res/drawable/ic_launcher_background.xml" value="0.2505" />
+        <entry key="myapplication/src/main/res/drawable/splash.xml" value="0.18" />
+        <entry key="myapplication/src/main/res/layout-v21/_inside_bio_book.xml" value="0.2994791666666667" />
+        <entry key="myapplication/src/main/res/layout-v21/activity_dashact.xml" value="0.2994791666666667" />
+        <entry key="myapplication/src/main/res/layout-v29/fragment_dashboard.xml" value="0.2994791666666667" />
+        <entry key="myapplication/src/main/res/layout/_inside_bio_book.xml" value="0.33" />
+        <entry key="myapplication/src/main/res/layout/activity_dashact.xml" value="0.23958333333333334" />
+        <entry key="myapplication/src/main/res/layout/activity_firebaseotp.xml" value="0.2994791666666667" />
+        <entry key="myapplication/src/main/res/layout/activity_insidebook.xml" value="0.26766304347826086" />
+        <entry key="myapplication/src/main/res/layout/activity_login.xml" value="0.20104166666666667" />
+        <entry key="myapplication/src/main/res/layout/activity_main.xml" value="0.26766304347826086" />
+        <entry key="myapplication/src/main/res/layout/activity_main2.xml" value="0.26766304347826086" />
+        <entry key="myapplication/src/main/res/layout/activity_otp.xml" value="0.2994791666666667" />
+        <entry key="myapplication/src/main/res/layout/activity_upload.xml" value="0.2994791666666667" />
+        <entry key="myapplication/src/main/res/layout/activity_viewpager.xml" value="0.18" />
+        <entry key="myapplication/src/main/res/layout/activity_web.xml" value="0.35989583333333336" />
+        <entry key="myapplication/src/main/res/layout/adapter.xml" value="0.5524652338811631" />
+        <entry key="myapplication/src/main/res/layout/adapter2.xml" value="0.6181046676096181" />
+        <entry key="myapplication/src/main/res/layout/adapter3.xml" value="0.33" />
+        <entry key="myapplication/src/main/res/layout/adapter4.xml" value="0.2994791666666667" />
+        <entry key="myapplication/src/main/res/layout/dashact.xml" value="0.29739583333333336" />
+        <entry key="myapplication/src/main/res/layout/fragment_bio.xml" value="0.2994791666666667" />
+        <entry key="myapplication/src/main/res/layout/fragment_dashboard.xml" value="0.26766304347826086" />
+        <entry key="myapplication/src/main/res/layout/fragment_fav.xml" value="0.3473731884057971" />
+        <entry key="myapplication/src/main/res/layout/fragment_favourites.xml" value="0.2994791666666667" />
+        <entry key="myapplication/src/main/res/layout/fragment_frag1.xml" value="0.25" />
+        <entry key="myapplication/src/main/res/layout/fragment_frag2.xml" value="0.33" />
+        <entry key="myapplication/src/main/res/layout/fragment_my.xml" value="0.2994791666666667" />
+        <entry key="myapplication/src/main/res/layout/fragment_privacy.xml" value="0.3473731884057971" />
+        <entry key="myapplication/src/main/res/layout/fragment_viewpager2.xml" value="0.2994791666666667" />
+        <entry key="myapplication/src/main/res/layout/headers.xml" value="0.26766304347826086" />
+        <entry key="myapplication/src/main/res/layout/http.xml" value="0.26766304347826086" />
+        <entry key="myapplication/src/main/res/layout/inside_book.xml" value="0.25" />
+        <entry key="myapplication/src/main/res/layout/xml_splash.xml" value="0.3473731884057971" />
+        <entry key="myapplication/src/main/res/menu/icon.xml" value="0.35989583333333336" />
+        <entry key="myapplication/src/main/res/menu/icons.xml" value="0.35989583333333336" />
+        <entry key="myapplication/src/main/res/menu/search.xml" value="0.2994791666666667" />
+        <entry key="myapplication/src/main/res/xml/network.xml" value="0.26766304347826086" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

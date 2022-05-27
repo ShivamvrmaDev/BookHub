@@ -1,0 +1,35 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Test" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/purple_200</item>
+        <item name="colorPrimaryVariant">@color/darkmode</item>
+        <item name="colorOnPrimary">@color/black</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/teal_200</item>
+        <item name="colorSecondaryVariant">#056BDA03</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" >@color/darkmode</item>
+
+        <!-- Customize your theme here. -->
+
+    </style>
+    <style name="dash" parent="Theme.AppCompat.DayNight.NoActionBar">
+        <item name="android:textColorPrimary">@color/white</item>
+
+        <item name="android:windowBackground">@color/black</item>
+
+    </style>
+
+
+
+
+
+    <style name="splashs" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="android:windowBackground">@drawable/splash</item>
+<item name="android:statusBarColor">#FFFFFF</item>
+
+    </style>
+
+</resources>
