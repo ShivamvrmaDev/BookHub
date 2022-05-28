@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Viewpager2">
+    tools:context=".viewpagers.favpagerr">
 
 
     <androidx.viewpager.widget.ViewPager

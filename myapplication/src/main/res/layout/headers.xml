@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="240dp"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".headers"
+    tools:context=".activity.headers"
     android:background="#4169E1">
 
     <ImageView

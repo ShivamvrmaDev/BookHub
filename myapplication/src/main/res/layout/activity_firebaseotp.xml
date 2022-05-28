@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".firebaseotp">
+    tools:context=".others.firebaseotp">
 
     <!--This will be used to enter the phone number-->
     <EditText

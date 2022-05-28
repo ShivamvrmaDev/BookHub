@@ -24,23 +24,23 @@
         android:supportsRtl="true"
         android:theme="@style/Test"
         tools:targetApi="n">
-  <activity android:name="OtpActivity"
+  <activity android:name=".others.OtpActivity"
       android:exported="true"/>
         <activity
-            android:name=".firebaseotp"
+            android:name=".others.firebaseotp"
             android:exported="true"/>
 
         <activity
-            android:name=".Upload"
+            android:name=".others.Upload"
             android:exported="true"/>
 
         <activity
-            android:name=".InsideBioBook"
+            android:name=".activity.InsideBioBook"
             android:exported="false"
             android:screenOrientation="fullSensor"
             android:configChanges="orientation|screenSize"/>
         <activity
-            android:name=".Splash"
+            android:name=".activity.Splash"
             android:exported="true"
             android:noHistory="true"
             android:theme="@style/splashs"
@@ -53,21 +53,21 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Login"
+            android:name=".others.Login"
             android:exported="false" />
         <activity
-            android:name=".InsideBook"
+            android:name=".activity.InsideBook"
             android:exported="false"
             android:screenOrientation="fullSensor"
             android:configChanges="orientation|screenSize"/>
         <activity
-            android:name=".dashact"
+            android:name=".activity.dashact"
             android:exported="true"
 
 
             android:configChanges="orientation|screenSize"/>
         <activity
-            android:name=".headers"
+            android:name=".activity.headers"
             android:exported="true" />
 
         <meta-data
