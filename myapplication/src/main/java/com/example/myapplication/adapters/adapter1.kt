@@ -12,6 +12,7 @@ import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.Adapter
 import com.example.myapplication.R
 import com.example.myapplication.activity.InsideBook
+import com.example.myapplication.classes.NormalBook
 import com.squareup.picasso.Picasso
 
 

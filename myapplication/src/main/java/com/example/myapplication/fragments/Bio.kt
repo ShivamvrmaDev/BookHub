@@ -85,8 +85,8 @@ retrived()
 
     @RequiresApi(Build.VERSION_CODES.O)
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
-      inflater.inflate(R.menu.search,menu)
-        var search= menu.findItem(R.id.search1)
+      inflater.inflate(R.menu.icon,menu)
+        var search= menu.findItem(R.id.search)
         var s=search.actionView as SearchView
         s.onActionViewExpanded()
         s.focusable
