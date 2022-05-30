@@ -24,34 +24,22 @@ import org.json.JSONObject
 
 
 class InsideBook : AppCompatActivity() {
-lateinit var add :Button
             lateinit var toolbar: Toolbar
-            lateinit var name: TextView
-            lateinit var name2: TextView
-            lateinit var price: TextView
-            lateinit var rating: TextView
-            lateinit var about: TextView
-            lateinit var data: TextView
-
-            lateinit var progrssbar: RelativeLayout
-            lateinit var firstimg: ImageView
-
-
             var bookid: String? = "100"
             override fun onCreate(savedInstanceState: Bundle?) {
                 super.onCreate(savedInstanceState)
                 setContentView(R.layout.inside_book)
 
                 toolbar = findViewById(R.id.toolbar)
-                name = findViewById(R.id.name)
-                name2 = findViewById(R.id.name2)
-                rating = findViewById(R.id.rating)
-                about = findViewById(R.id.data)
-                data = findViewById(R.id.desc)
-                add = findViewById(R.id.button)
-                progrssbar = findViewById(R.id.progressb)
-                firstimg = findViewById(R.id.firstimg)
-                price = findViewById(R.id.price)
+                var  name = findViewById<TextView>(R.id.name)
+                var    name2 = findViewById<TextView>(R.id.name2)
+                var     rating = findViewById<TextView>(R.id.rating)
+                var     about = findViewById<TextView>(R.id.data)
+
+                var     add = findViewById<Button>(R.id.button)
+                var    progrssbar = findViewById<RelativeLayout>(R.id.progressb)
+                var   firstimg = findViewById<ImageView>(R.id.firstimg)
+           var price = findViewById<TextView>(R.id.price)
 toolbar()
 
                 progrssbar.visibility= View.VISIBLE
@@ -142,13 +130,13 @@ var image=json.getString("image")
 
 
                     } else {
-                        makeText(this, "dcfjhrhbrjhh", Toast.LENGTH_LONG).show()
+                        makeText(this, "some error occured", Toast.LENGTH_LONG)
+                            .show()
                     }
 
                 }, Response.ErrorListener {
 
-                    makeText(this, "some error mnnzbdhboccured", Toast.LENGTH_SHORT)
-                        .show()
+                    makeText(this, "some error occured", LENGTH_SHORT).show()
                 }) {
                     override fun getHeaders(): MutableMap<String, String> {
                         var hash = HashMap<String, String>()

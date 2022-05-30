@@ -11,8 +11,8 @@ import com.google.android.gms.common.api.Status
 
 class Broadcaster : BroadcastReceiver() {
     override fun onReceive(context: Context?, intent: Intent) {
-        if (SmsRetriever.SMS_RETRIEVED_ACTION == intent.getAction()) {
-            val extras: Bundle? = intent.getExtras()
+        if (SmsRetriever.SMS_RETRIEVED_ACTION == intent.action) {
+            val extras: Bundle? = intent.extras
             val status: Status = extras?.get(SmsRetriever.EXTRA_STATUS) as Status
             when (status.statusCode) {
                 CommonStatusCodes.SUCCESS -> {           // Get SMS message contents

@@ -17,7 +17,7 @@ class favpagerr : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
+
         var view=inflater.inflate(R.layout.fragment_viewpager2, container, false)
 
         var pager=view.findViewById<ViewPager>(R.id.view)

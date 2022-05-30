@@ -19,7 +19,6 @@ import com.example.myapplication.sqlite.DbClass
 
 class NormalFavBook : Fragment() {
 
-    lateinit var recycle :RecyclerView
 lateinit var list: List<Books>
 
 
@@ -30,7 +29,7 @@ lateinit var list: List<Books>
     ): View? {
       val view =inflater.inflate(R.layout.fragment_favourites, container, false)
 
-        recycle=view.findViewById(R.id.recyclerfav)
+       var recycle=view.findViewById<RecyclerView>(R.id.recyclerfav)
         recycle.layoutManager=GridLayoutManager(activity ,2)
 
         list= Async(activity as Context).execute().get()
@@ -40,11 +39,6 @@ lateinit var list: List<Books>
             recycle.adapter= Adapter3(list)
 
         }
-
-
-
-
-
         return view
     }
     class Async( val context: Context) : AsyncTask<Void, Void, List<Books>>() {

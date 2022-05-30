@@ -1,7 +1,7 @@
-package com.example.myapplication.viewpagers;
+package com.example.myapplication.viewpagers
 
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentPagerAdapter
 import com.example.myapplication.fragments.BiographyFavBook
 import com.example.myapplication.fragments.NormalFavBook

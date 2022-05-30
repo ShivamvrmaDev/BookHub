@@ -25,15 +25,10 @@ class Adapter3(var list: List<Books>)  :RecyclerView.Adapter<Adapter3.Viewholder
 
 
         var id=list[position]
-        var auth=list[position]                      /*  now i am parsing the data from the ada array */
-        holder.author.text=auth.writer
-        var nam=list[position]
-        holder.year.text=nam.name
-
-        var rate=list[position]
-        holder.rating.text=rate.rating
-        var pri=list[position]
-        holder.price.text=pri.price
+        holder.author.text=list[position].writer
+        holder.year.text=list[position].name
+        holder.rating.text=list[position].rating
+        holder.price.text=list[position].price
 
 
 

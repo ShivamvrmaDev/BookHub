@@ -16,8 +16,8 @@ import com.google.firebase.database.*
 import com.squareup.picasso.Picasso
 
 class InsideBioBook : AppCompatActivity() {
-    lateinit var reference: DatabaseReference
-    lateinit var toolbar: Toolbar
+
+
 
     var id : String="jkgjeg"
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -32,7 +32,7 @@ class InsideBioBook : AppCompatActivity() {
         var  img = findViewById<ImageView>(R.id.firstimg)
         var   data = findViewById<TextView>(R.id.data)
 
-     toolbar = findViewById(R.id.toolbar)
+   var toolbar = findViewById<Toolbar>(R.id.toolbar)
 
    val progrssbar = findViewById<RelativeLayout>(R.id.progress)
         var  price = findViewById<TextView>(R.id.price)
@@ -45,7 +45,7 @@ class InsideBioBook : AppCompatActivity() {
 
 
 
-        reference=FirebaseDatabase.getInstance("https://fir-a141a-default-rtdb.asia-southeast1.firebasedatabase.app/").getReference()
+   var     reference=FirebaseDatabase.getInstance("https://fir-a141a-default-rtdb.asia-southeast1.firebasedatabase.app/").reference
         reference.child("Book").child(id).addValueEventListener(object: ValueEventListener{
             override fun onDataChange(snapshot: DataSnapshot) {
 if(snapshot.exists()){

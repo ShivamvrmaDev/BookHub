@@ -15,15 +15,6 @@
         <!-- Customize your theme here. -->
 
     </style>
-    <style name="dash" parent="Theme.AppCompat.DayNight.NoActionBar">
-        <item name="android:textColorPrimary">@color/white</item>
-
-        <item name="android:windowBackground">@color/black</item>
-
-    </style>
-
-
-
 
 
     <style name="splashs" parent="Theme.MaterialComponents.DayNight.NoActionBar">

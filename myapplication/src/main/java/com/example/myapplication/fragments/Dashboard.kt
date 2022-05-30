@@ -7,6 +7,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.provider.Settings
 import android.view.*
+import android.widget.HorizontalScrollView
 import android.widget.RelativeLayout
 import android.widget.SearchView
 import android.widget.Toast
@@ -28,15 +29,13 @@ import java.util.*
 
 class Dashboard : Fragment() {
 
-    lateinit var recyclerView: RecyclerView // recycler view/
-    lateinit var relativeLayout: RelativeLayout
-    lateinit var ada: adapter1  //adapter class object
+
+
 
     lateinit var swipe: SwipeRefreshLayout
-    lateinit var LayoutManager: LinearLayoutManager
 lateinit var value :ArrayList<NormalBook>
     lateinit var temp :ArrayList<NormalBook>
-
+lateinit var recyclerView :RecyclerView
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
 
@@ -46,11 +45,10 @@ lateinit var value :ArrayList<NormalBook>
         temp= ArrayList()
         value=ArrayList()
         setHasOptionsMenu(true)
-
         swipe = view.findViewById(R.id.swipe)
-        relativeLayout = view.findViewById(R.id.progresslaoout)
+          var    relativeLayout = view.findViewById<RelativeLayout>(R.id.progresslaoout)
         recyclerView = view.findViewById(R.id.recycler)
-        LayoutManager = LinearLayoutManager(activity)
+    var LayoutManager = LinearLayoutManager(activity)
         gettingData()
         swipe.setOnRefreshListener {
             gettingData()
@@ -90,10 +88,8 @@ lateinit var value :ArrayList<NormalBook>
                         makeText(context, "some error occuhsfbnbred", Toast.LENGTH_SHORT).show()
                     }
 //
-                    /* saying context == null*/
-                    ada = adapter1(activity as Context, temp)        /*now giving activity as context
-               and adding value array that will access by adapter class array*/
-                    recyclerView.adapter = ada          /* connecting these classes  */
+
+                    recyclerView.adapter = adapter1(activity as Context, temp)
                     recyclerView.layoutManager = LayoutManager
                 } catch (e: JSONException) {
 

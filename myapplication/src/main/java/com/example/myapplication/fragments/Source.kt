@@ -21,12 +21,8 @@ class Source : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         var view = inflater.inflate(R.layout.fragment_privacy, container, false)
-
         retainInstance=true
-
-
         webView = view.findViewById(R.id.web)
-
 
         var swipe = view.findViewById<SwipeRefreshLayout>(R.id.swipe)
 
@@ -38,10 +34,7 @@ class Source : Fragment() {
             webView.settings.forceDark
 
         }
-        // this will load the url of the website
 
-
-        // this will enable the javascript settings
         swipe.setOnRefreshListener {
             webView.reload()
             swipe.isRefreshing = false
@@ -50,11 +43,5 @@ class Source : Fragment() {
         return view
 
     }
-
-
-
-
-
-
 
 }

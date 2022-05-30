@@ -1,26 +1,10 @@
 <resources>
     <string name="app_name">BookHub</string>
-    <string name="facebook_app_id">454096436324445</string>
-    <string name="fb_login_protocol_scheme">fb454096436324445</string>
-    <string name="facebook_client_token">394d67e0c0b2f80973be6c30144fc9ad</string>
     <string name="open">open</string>
     <string name="close">close</string>
-    <string name="dashboard">Dashboard</string>
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="click_here_to_go_on_dashboard">click here to go on dashboard</string>
     <string name="search">search</string>
     <string name="home">home</string>
-    <string name="title_activity_fb">fb</string>
-    <string name="prompt_email">Email</string>
-    <string name="prompt_password">Password</string>
-    <string name="action_sign_in">Sign in or register</string>
-    <string name="action_sign_in_short">Sign in</string>
-    <string name="welcome">"Welcome !"</string>
-    <string name="invalid_username">Not a valid username</string>
-    <string name="invalid_password">Password must be >5 characters</string>
-    <string name="login_failed">"Login failed"</string>
-    <string name="back">back</string>
 
     <string name="add_book">add to favourites</string>
     <string name="remove_book">remove from favourites</string>
@@ -33,9 +17,6 @@
     <string name="name">name</string>
 
     <string name="by">By</string>
-    <string name="enter_your_no" />
-    <string name="login" />
-    <string name="enter_otp">enter_otp</string>
     <string name="_500">price</string>
 
 </resources>

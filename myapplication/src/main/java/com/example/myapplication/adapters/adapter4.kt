@@ -18,37 +18,21 @@ class adapter4( var list: List<Biography>)  : RecyclerView.Adapter<adapter4.View
 
         return Viewholder4((view))
     }
-
     override fun onBindViewHolder(holder: Viewholder4, position: Int) {
 
-
-
-
         var id=list[position]
-        var auth=list[position]                      /*  now i am parsing the data from the ada array */
-        holder.author.text=auth.writer
-        var nam=list[position]
-        holder.year.text=nam.name
-
-        var rate=list[position]
-        holder.rating.text=rate.rating
-        var pri=list[position]
-        holder.price.text=pri.price
-
-
-
+        holder.author.text=list[position].writer
+        holder.year.text=list[position].name
+        holder.rating.text=list[position].rating
+        holder.price.text=list[position].price
         Picasso.get().load(id.image).into(holder.image)
 
     }
-
     override fun getItemCount() :Int{
         return list.size
 
     }
-
-
     class Viewholder4(view: View) : RecyclerView.ViewHolder(view) {
-
 
         var year = view.findViewById<TextView>(R.id.name)
         var author = view.findViewById<TextView>(R.id.author)

@@ -39,7 +39,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity
             android:name=".activity.InsideBook"
             android:exported="false"
@@ -48,14 +47,10 @@
         <activity
             android:name=".activity.dashact"
             android:exported="true"
-
-
             android:configChanges="orientation|screenSize"/>
         <activity
             android:name=".activity.headers"
             android:exported="true" />
-
-
 
     </application>
 

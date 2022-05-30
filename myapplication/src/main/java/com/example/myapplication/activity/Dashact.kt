@@ -6,7 +6,6 @@ import android.view.MenuItem
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
-import androidx.coordinatorlayout.widget.CoordinatorLayout
 import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
 import com.example.myapplication.R
@@ -18,10 +17,8 @@ import com.google.android.material.navigation.NavigationView
 
 class dashact : AppCompatActivity() {
     lateinit var toolbar: Toolbar
-    lateinit var coordinator: CoordinatorLayout
-    lateinit var navigationdrawer: NavigationView
     lateinit var drawerLayout: DrawerLayout
-var nameofuser :String?="jdghjg"
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -29,8 +26,8 @@ var nameofuser :String?="jdghjg"
         setContentView(R.layout.dashact)
 
             toolbar = findViewById(R.id.toolbar)
-            coordinator = findViewById(R.id.coordinator)
-            navigationdrawer = findViewById(R.id.navigationview)
+
+           var navigationdrawer = findViewById<NavigationView>(R.id.navigationview)
             drawerLayout = findViewById(R.id.drawerlayout)
 
             actionbar()
@@ -56,12 +53,7 @@ var nameofuser :String?="jdghjg"
             navigationdrawer.setNavigationItemSelectedListener {
 
 
-                if (it.isChecked==true){
-                    it.isCheckable=true
-                }else{
-
-                    it.isCheckable=false
-                }
+                it.isCheckable = it.isChecked==true
 
 
 

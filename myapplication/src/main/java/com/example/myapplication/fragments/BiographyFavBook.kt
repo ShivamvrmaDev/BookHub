@@ -1,5 +1,6 @@
 package com.example.myapplication.fragments
 
+import android.annotation.SuppressLint
 import android.content.Context
 import android.os.AsyncTask
 import android.os.Bundle
@@ -17,7 +18,6 @@ import com.example.myapplication.sqlite.DbClass
 
 class BiographyFavBook : Fragment() {
 
-    lateinit var recycle : RecyclerView
     lateinit var list: List<Biography>
 
 
@@ -28,7 +28,7 @@ class BiographyFavBook : Fragment() {
     ): View? {
         val view =inflater.inflate(R.layout.fragment_favourites, container, false)
 
-        recycle=view.findViewById(R.id.recyclerfav)
+    var    recycle=view.findViewById<RecyclerView>(R.id.recyclerfav)
         recycle.layoutManager= GridLayoutManager(activity ,2)
 
         list= Async(activity as Context).execute().get()
@@ -45,7 +45,7 @@ class BiographyFavBook : Fragment() {
 
         return view
     }
-    class Async( val context: Context) : AsyncTask<Void, Void, List<Biography>>() {
+    class Async(@SuppressLint("StaticFieldLeak") val context: Context) : AsyncTask<Void, Void, List<Biography>>() {
         override fun doInBackground(vararg p0: Void?): List<Biography> {
 
             var db= Room.databaseBuilder(context, DbClass::class.java,"books_db").build()

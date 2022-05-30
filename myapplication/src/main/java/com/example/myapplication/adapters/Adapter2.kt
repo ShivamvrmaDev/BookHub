@@ -23,16 +23,12 @@ class Adapter2(var a: ArrayList<BiographyBook>, var context : Context) : Recycle
 
     override fun onBindViewHolder(holder: Holder, position: Int) {
         var id=a[position]
-        var auth=a[position]                      /*  now i am parsing the data from the ada array */
-        holder.author.text=auth.writer
-        var nam=a[position]
-        holder.year.text=nam.name
 
-        var rate=a[position]
-        holder.rating.text=rate.rating
-        var pri=a[position]
-        holder.price.text=pri.price
-Picasso.get().load(pri.image).into(holder.image)
+        holder.author.text=a[position].writer
+        holder.year.text=a[position].name
+        holder.rating.text=a[position].rating
+        holder.price.text=a[position].price
+Picasso.get().load(id.image).into(holder.image)
 
         holder.layout.setOnClickListener {
 

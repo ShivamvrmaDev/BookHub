@@ -19,19 +19,19 @@ import java.util.*
 
 class frag2 :Fragment() {
 
-    lateinit var mref : DatabaseReference
+
 lateinit var recycle : RecyclerView
-lateinit var progress :RelativeLayout
+
 lateinit var list :ArrayList<BiographyBook>
     lateinit var list2 :ArrayList<BiographyBook>
-lateinit var adapter2: Adapter2
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
 
     ): View? {
         var view= inflater.inflate(R.layout.fragment_frag2, container, false)
-        progress=view.findViewById(R.id.progresslaooutt)
+       var progress=view.findViewById<RelativeLayout>(R.id.progresslaooutt)
         progress.visibility=View.VISIBLE
         setHasOptionsMenu(true)
         list = ArrayList()
@@ -49,7 +49,7 @@ retrived()
     }
 
     private fun retrived() {
-        mref=FirebaseDatabase.getInstance("https://fir-a141a-default-rtdb.asia-southeast1.firebasedatabase.app/").getReference("Book")
+      var  mref=FirebaseDatabase.getInstance("https://fir-a141a-default-rtdb.asia-southeast1.firebasedatabase.app/").getReference("Book")
 
         mref.addValueEventListener(object: ValueEventListener{
             override fun onDataChange(snapshot: DataSnapshot) {
@@ -60,26 +60,16 @@ retrived()
                         var data = snap.getValue(BiographyBook::class.java)!!
 
                         list.add(data)
-
-
                     }
                     list2.addAll(list)
-
-
                 }
-                adapter2= Adapter2(list2,activity as Context)
-                recycle.adapter = adapter2
+                recycle.adapter = Adapter2(list2,activity as Context)
                 recycle.layoutManager = LinearLayoutManager(context)
             }
 
 
             override fun onCancelled(error: DatabaseError) {
-
-
-
             }
-
-
         })
     }
 

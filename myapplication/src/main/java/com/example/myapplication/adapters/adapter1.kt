@@ -29,34 +29,22 @@ class adapter1(var context : Context, var ada : ArrayList<NormalBook>) : Adapter
     override fun onBindViewHolder(holder: viewholderclass, position: Int) {
 
         var id=ada[position]
-        var auth=ada[position]                      /*  now i am parsing the data from the ada array */
-        holder.author.text=auth.author
-        var nam=ada[position]
-        holder.year.text=nam.name
-
-        var rate=ada[position]
-        holder.rating.text=rate.rating
-        var pri=ada[position]
-        holder.price.text=pri.price
-
-
+        holder.author.text=ada[position].author
+        holder.year.text=ada[position].name
+        holder.rating.text=ada[position].rating
+        holder.price.text=ada[position].price
 
         Picasso.get().load(id.image).into(holder.image)
-
 holder.layout.setOnClickListener {
 
     var intent =Intent(context, InsideBook :: class.java)
 intent.putExtra("book_id",id.book_id)
     context.startActivity(intent)
-
 }
     }
-
     override fun getItemCount() :Int{
         return ada.size             /* returning the size  */
     }
-
-
     class viewholderclass(view: View) : RecyclerView.ViewHolder(view) {
 
         var year=view.findViewById<TextView>(R.id.name)
