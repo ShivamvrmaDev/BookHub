@@ -24,24 +24,22 @@ lateinit var recycle : RecyclerView
 
 lateinit var list :ArrayList<BiographyBook>
     lateinit var list2 :ArrayList<BiographyBook>
-
+lateinit var progress : RelativeLayout
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
 
     ): View? {
         var view= inflater.inflate(R.layout.fragment_frag2, container, false)
-       var progress=view.findViewById<RelativeLayout>(R.id.progresslaooutt)
+        progress=view.findViewById(R.id.progresslaooutt)
         progress.visibility=View.VISIBLE
         setHasOptionsMenu(true)
         list = ArrayList()
  list2 = ArrayList()
 
-
 recycle=view.findViewById(R.id.recycler2)
 
 
-        progress.visibility=View.GONE
 retrived()
 
         return view
@@ -49,7 +47,7 @@ retrived()
     }
 
     private fun retrived() {
-      var  mref=FirebaseDatabase.getInstance("https://fir-a141a-default-rtdb.asia-southeast1.firebasedatabase.app/").getReference("Book")
+      val mref=FirebaseDatabase.getInstance("https://fir-a141a-default-rtdb.asia-southeast1.firebasedatabase.app/").getReference("Book")
 
         mref.addValueEventListener(object: ValueEventListener{
             override fun onDataChange(snapshot: DataSnapshot) {
@@ -63,6 +61,7 @@ retrived()
                     }
                     list2.addAll(list)
                 }
+                progress.visibility=View.GONE
                 recycle.adapter = Adapter2(list2,activity as Context)
                 recycle.layoutManager = LinearLayoutManager(context)
             }
@@ -71,6 +70,7 @@ retrived()
             override fun onCancelled(error: DatabaseError) {
             }
         })
+
     }
 
     @RequiresApi(Build.VERSION_CODES.O)

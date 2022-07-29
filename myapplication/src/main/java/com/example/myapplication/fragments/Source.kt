@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.webkit.WebView
+import android.webkit.WebViewClient
 import androidx.fragment.app.Fragment
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout
 import com.example.myapplication.R
@@ -25,7 +26,7 @@ class Source : Fragment() {
         webView = view.findViewById(R.id.web)
 
         var swipe = view.findViewById<SwipeRefreshLayout>(R.id.swipe)
-
+webView.webViewClient= WebViewClient()
         webView.apply {
 
             loadUrl("https://trainings.internshala.com/android-training/")

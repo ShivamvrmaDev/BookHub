@@ -21,6 +21,7 @@
        android:id="@+id/progresslaooutt"
        android:layout_width="match_parent"
        android:layout_height="match_parent"
+       android:layout_marginTop="40dp"
        android:background="?android:attr/windowBackground">
 
       <ProgressBar
@@ -28,7 +29,6 @@
           android:layout_height="wrap_content"
           android:layout_centerInParent="true"
           />
-
 
    </RelativeLayout>
 

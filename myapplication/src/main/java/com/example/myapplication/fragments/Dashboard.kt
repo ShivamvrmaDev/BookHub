@@ -6,8 +6,8 @@ import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.provider.Settings
+import android.util.Log
 import android.view.*
-import android.widget.HorizontalScrollView
 import android.widget.RelativeLayout
 import android.widget.SearchView
 import android.widget.Toast
@@ -33,9 +33,9 @@ class Dashboard : Fragment() {
 
 
     lateinit var swipe: SwipeRefreshLayout
-lateinit var value :ArrayList<NormalBook>
+    lateinit var value :ArrayList<NormalBook>
     lateinit var temp :ArrayList<NormalBook>
-lateinit var recyclerView :RecyclerView
+    lateinit var recyclerView :RecyclerView
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
 
@@ -46,9 +46,9 @@ lateinit var recyclerView :RecyclerView
         value=ArrayList()
         setHasOptionsMenu(true)
         swipe = view.findViewById(R.id.swipe)
-          var    relativeLayout = view.findViewById<RelativeLayout>(R.id.progresslaoout)
+        var    relativeLayout = view.findViewById<RelativeLayout>(R.id.progresslaoout)
         recyclerView = view.findViewById(R.id.recycler)
-    var LayoutManager = LinearLayoutManager(activity)
+        var LayoutManager = LinearLayoutManager(activity)
         gettingData()
         swipe.setOnRefreshListener {
             gettingData()
@@ -63,22 +63,24 @@ lateinit var recyclerView :RecyclerView
             object : JsonObjectRequest(Method.GET, url, null, Response.Listener {
 
                 try {
-                    relativeLayout.visibility = View.GONE
+
 
                     var success = it.getBoolean("success")
                     if (success) {
                         var data = it.getJSONArray("data")
-                        for (i in 0 until data.length())    //compiler yhi bolta h ki tum null aray ki length le rhe ho
+
+                        for (i in 0 until  data.length())    //compiler yhi bolta h ki tum null aray ki length le rhe ho
                         {
                             var jsonobject = data.getJSONObject(i)
-                         var  values=  NormalBook (
-                              jsonobject.getString("book_id"),
-                              jsonobject.getString("name"),
-                              jsonobject.getString("author"),
-                              jsonobject.getString("price"),
-                              jsonobject.getString("rating"),
-                              jsonobject.getString("image")
-                          )
+
+                            var  values=  NormalBook (
+                                jsonobject.getString("book_id"),
+                                jsonobject.getString("name"),
+                                jsonobject.getString("author"),
+                                jsonobject.getString("price"),
+                                jsonobject.getString("rating"),
+                                jsonobject.getString("image")
+                            )
                             value.add(values)
 //
 
@@ -88,7 +90,7 @@ lateinit var recyclerView :RecyclerView
                         makeText(context, "some error occuhsfbnbred", Toast.LENGTH_SHORT).show()
                     }
 //
-
+                    relativeLayout.visibility = View.GONE
                     recyclerView.adapter = adapter1(activity as Context, temp)
                     recyclerView.layoutManager = LayoutManager
                 } catch (e: JSONException) {
@@ -117,7 +119,6 @@ lateinit var recyclerView :RecyclerView
 
         if (connection().ConnectionChecking(activity as Context)) {
 
-
         } else {
             var build = AlertDialog.Builder(activity as Context)
 
@@ -128,9 +129,7 @@ lateinit var recyclerView :RecyclerView
                 startActivityForResult(Intent(Settings.ACTION_WIRELESS_SETTINGS), 0)
             }
             build.setNegativeButton("cancel") { text, listner ->
-
             }
-
             build.create()
             build.show()
         }
@@ -149,7 +148,7 @@ lateinit var recyclerView :RecyclerView
         search.focusable
         search.requestFocus()
         search.requestFocusFromTouch()
-search.queryHint= "enter"
+        search.queryHint= "enter"
 
 
         search.setOnQueryTextListener(object:SearchView.OnQueryTextListener{
@@ -158,7 +157,7 @@ search.queryHint= "enter"
             override fun onQueryTextSubmit(p0: String?): Boolean {
 
 
-              return true
+                return true
             }
 
             @SuppressLint("NotifyDataSetChanged")
@@ -181,10 +180,10 @@ search.queryHint= "enter"
 
                 }
                 return false
-        }
-    })
+            }
+        })
         super.onCreateOptionsMenu(menu, inflater)
-}
+    }
 
 
 }
