@@ -38,7 +38,7 @@ webView.webViewClient= WebViewClient()
 
         swipe.setOnRefreshListener {
             webView.reload()
-            swipe.isRefreshing = false
+            swipe.isRefreshing = false //ef
         }
 
         return view
