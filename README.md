@@ -1,5 +1,5 @@
 # BookHub
-# ScreenShorts of the application to understand it's functioning
+# ScreenShorts of the application to understand it's functionality 
 # Homescreen of the app
 ![homescreen](https://user-images.githubusercontent.com/110259464/182689174-ed13d272-678f-40b2-8a9b-f5aa9bfc9804.jpeg)
 # book with some description
